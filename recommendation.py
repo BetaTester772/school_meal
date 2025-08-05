@@ -11,7 +11,7 @@ import seaborn as sns
 import matplotlib
 
 # 한글 폰트 설정
-matplotlib.rcParams['font.family'] = 'Malgun Gothic'
+matplotlib.rcParams['font.family'] = 'NanumGothic'
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.title("🍽️ AI 기반 급식 메뉴 분석 대시보드")
