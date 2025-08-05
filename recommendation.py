@@ -81,7 +81,7 @@ if high_leftover.empty:
     st.warning("해당 기준 이상 잔반량을 가진 식품이 없습니다.")
 else:
     fig1, ax1 = plt.subplots(figsize=(12, 6))
-    ax1.bar(high_leftover["식품명"], high_leftover["평균잔반량"], color='tomato', fontproperties=fontprop)
+    ax1.bar(high_leftover["식품명"], high_leftover["평균잔반량"], color='tomato')
     ax1.set_ylabel("평균잔반량", fontproperties=fontprop)
     ax1.set_title(f"평균잔반량 {threshold} 이상 식품", fontproperties=fontprop)
     plt.xticks(rotation=45, ha='right', fontsize=10)
