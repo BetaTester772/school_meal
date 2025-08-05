@@ -82,8 +82,8 @@ if high_leftover.empty:
 else:
     fig1, ax1 = plt.subplots(figsize=(12, 6))
     ax1.bar(high_leftover["식품명"], high_leftover["평균잔반량"], color='tomato')
-    ax1.set_ylabel("평균잔반량", fontproperties=fontprop)
-    ax1.set_title(f"평균잔반량 {threshold} 이상 식품", fontproperties=fontprop)
+    ax1.set_ylabel("평균잔반량", )
+    ax1.set_title(f"평균잔반량 {threshold} 이상 식품", )
     plt.xticks(rotation=45, ha='right', fontsize=10)
     st.pyplot(fig1)
 
@@ -151,14 +151,14 @@ else:
                 cluster_targets.iloc[i]["PCA3"],
                 cluster_targets.iloc[i]["식품명"],
                 fontsize=7,
-                fontproperties=fontprop
+
         )
 
-    ax2.set_title("잔반량 높은 메뉴 + 추천 메뉴 군집화 (3D PCA)", fontproperties=fontprop)
+    ax2.set_title("잔반량 높은 메뉴 + 추천 메뉴 군집화 (3D PCA)", )
     ax2.set_xlabel("PCA1")
     ax2.set_ylabel("PCA2")
     ax2.set_zlabel("PCA3")
 
-    plt.legend(*scatter.legend_elements(), title="클러스터", fontproperties=fontprop)
+    plt.legend(*scatter.legend_elements(), title="클러스터")
     plt.tight_layout()
     st.pyplot(fig2)
