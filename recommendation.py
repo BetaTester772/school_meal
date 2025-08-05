@@ -11,7 +11,11 @@ import seaborn as sns
 import matplotlib
 
 # 한글 폰트 설정
-matplotlib.rcParams['font.family'] = 'NanumGothic'
+import matplotlib.font_manager as fm
+
+path = '/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf'
+fontprop = fm.FontProperties(fname=path, size=18)
+matplotlib.rc('font', family=fontprop.get_name())
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.title("🍽️ AI 기반 급식 메뉴 분석 대시보드")
