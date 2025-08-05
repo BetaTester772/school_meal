@@ -17,11 +17,11 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 st.title("🍽️ AI 기반 급식 메뉴 분석 대시보드")
 
 # 1. 데이터 불러오기
-uploaded_file = st.file_uploader("CSV 파일 업로드", type=["csv"])
+uploaded_file = st.file_uploader("CSV 파일(UTF-8) 업로드", type=["csv"])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, encoding='cp949')
 else:
-    df = pd.read_csv("식품별_고유값_잔반률_영양성분.csv", encoding='cp949')
+    df = pd.read_csv("recommendation_data.csv", encoding='utf-8')
     st.info("기본 파일을 불러왔습니다. 업로드된 파일이 없으므로 기본 데이터를 사용합니다.")
 
 df.columns = df.columns.str.strip()  # 공백 제거

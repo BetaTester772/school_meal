@@ -25,7 +25,7 @@ if 'initialized' not in st.session_state:
     st.session_state.model = load_model('leftover_prediction_model.keras')
 
     # 데이터셋 로드 및 전처리 기준 확보
-    data = pd.read_csv('2025_급식데이터_YOLO용_면적단위 (2).csv', encoding='utf-8')
+    data = pd.read_csv('predict_data.csv', encoding='utf-8')
     data.columns = data.columns.str.strip()
 
     X = data[['선호도', '기온(°C)', '계절',

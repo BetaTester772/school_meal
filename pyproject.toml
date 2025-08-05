@@ -10,4 +10,5 @@ dependencies = [
     "seaborn>=0.13.2",
     "streamlit>=1.47.1",
     "tensorflow>=2.19.0",
+    "watchdog>=6.0.0",
 ]
