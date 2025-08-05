@@ -13,7 +13,7 @@ import matplotlib
 # 한글 폰트 설정
 import matplotlib.font_manager as fm
 
-path = '/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf'
+path = '/usr/share/fonts/nanumfont/NanumGothic.ttf'
 fontprop = fm.FontProperties(fname=path, size=18)
 matplotlib.rc('font', family=fontprop.get_name())
 matplotlib.rcParams['axes.unicode_minus'] = False
