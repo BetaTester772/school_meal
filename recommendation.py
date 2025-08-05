@@ -142,7 +142,6 @@ else:
             c=cluster_targets["cluster"],
             cmap="Set2",
             s=100,
-            fontproperties=fontprop
     )
 
     for i in range(len(cluster_targets)):
