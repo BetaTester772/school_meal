@@ -17,8 +17,12 @@ font_path = '/usr/share/fonts/nanumfont/NanumGothic.ttf'
 fontprop = font_manager.FontProperties(fname=font_path)
 
 # 전역 설정으로 적용
-print(fontprop.get_name())   # 실제 matplotlib에서 인식한 폰트 이름 출력
+# print(fontprop.get_name())   # 실제 matplotlib에서 인식한 폰트 이름 출력
 rc('font', family=fontprop.get_name())
+
+import matplotlib as mpl
+
+mpl.rcParams['axes.unicode_minus'] = False
 
 st.title("🍽️ AI 기반 급식 메뉴 분석 대시보드")
 
