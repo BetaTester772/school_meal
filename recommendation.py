@@ -163,5 +163,5 @@ else:
 
     plt.legend(*scatter.legend_elements(), title="클러스터")
     plt.tight_layout()
-    st.info("Linux server에서 한글 폰트가 적용되지 않고 있습니다. 로컬에서 실행해 주세요.")
+    # st.info("Linux server에서 한글 폰트가 적용되지 않고 있습니다. 로컬에서 실행해 주세요.")
     st.pyplot(fig2)
