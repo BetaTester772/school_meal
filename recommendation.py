@@ -10,13 +10,14 @@ from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 import matplotlib
 
-# 한글 폰트 설정
-import matplotlib.font_manager as fm
+from matplotlib import font_manager, rc
 
-path = '/usr/share/fonts/nanumfont/NanumGothic.ttf'
-fontprop = fm.FontProperties(fname=path, size=18)
-matplotlib.rc('font', family=fontprop.get_name())
-matplotlib.rcParams['axes.unicode_minus'] = False
+# 경로에 있는 폰트 등록
+font_path = '/usr/share/fonts/nanumfont/NanumGothic.ttf'
+fontprop = font_manager.FontProperties(fname=font_path)
+
+# 전역 설정으로 적용
+rc('font', family=fontprop.get_name())
 
 st.title("🍽️ AI 기반 급식 메뉴 분석 대시보드")
 
